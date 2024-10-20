@@ -17,9 +17,9 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 
-	postgresURI := os.Getenv("DATABASE_URL")
+	postgresURI := os.Getenv("POSTGRES_URL")
 	if postgresURI == "" {
-		log.Fatal("DATABASE_URL is not set in the environment")
+		log.Fatal("POSTGRES_URL is not set in the environment")
 	}
 
 	// Open the PostgreSQL database
